@@ -1,0 +1,267 @@
+/* Colors */
+
+:root {
+  --main-lite: rgb(254, 246, 240);
+  --main-dark: rgb(24, 24, 24);
+
+  --body-text-lite: rgba(254, 246, 240, 0.8);
+  --body-text-dark: rgb(55, 55, 55);
+
+  --main-brand-color: rgb(244, 92, 73);
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: "Droid Sans";
+  src: url("./fonts/DroidSans.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Droid Sans";
+  src: url("./fonts/DroidSans-Bold.ttf");
+  font-weight: 800;
+}
+
+/* Globel Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* overflow-x: hidden; */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--main-lite);
+}
+
+body {
+  font-family: "Droid Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--body-text-lite);
+  /* padding: 0 4.8rem; */
+
+  background-color: var(--main-dark);
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 1.4;
+}
+
+/* TExt and TExt Colors */
+
+.heading-primary {
+  font-size: 7.4rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  /* TODO: */
+  max-width: 83%;
+
+  position: relative;
+}
+
+.p-18 {
+  font-size: 1.8rem;
+}
+
+.p-dark {
+  color: var(--body-text-dark);
+}
+
+.red-text {
+  color: var(--main-brand-color);
+}
+
+.heading-dark {
+  color: var(--main-dark);
+}
+
+.heading-icon {
+  position: absolute;
+  display: inline-block;
+  height: 68px;
+  width: 68px;
+}
+
+.container {
+  max-width: 134rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+a:link,
+a:visited {
+  color: var(--main-lite);
+  display: inline-block;
+  font-size: 1.8rem;
+}
+
+/* Btn Full */
+
+.btn-full {
+  background-color: var(--main-brand-color);
+  padding: 1.2rem 3.2rem;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px var(--main-lite);
+
+  transition: box-shadow 0.2s ease-out;
+}
+
+.btn-full:hover {
+  box-shadow: -3px -3px 4px var(--main-lite);
+}
+
+.btn-outline {
+  text-decoration: none;
+  background-image: linear-gradient(
+    var(--main-brand-color),
+    var(--main-brand-color)
+  );
+  background-size: 0% 0.3rem;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
+  transition: background-size 0.2s ease-out;
+}
+
+.btn-outline:hover {
+  background-size: 100% 0.3rem;
+}
+
+/* Layouts and Lauouts spacing */
+
+/* GRID */
+
+.grid {
+  display: grid;
+}
+
+.grid-2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-gap-48 {
+  column-gap: 4.8rem;
+}
+
+.justify-end-img-box {
+  justify-self: end;
+  padding: 3.2rem 0;
+}
+
+/* FLEX */
+
+.flex {
+  display: flex;
+}
+
+.flex-align-v {
+  align-items: center;
+}
+
+.flex-spacebetween {
+  justify-content: space-around;
+}
+
+.flex-col-gap-24 {
+  column-gap: 2.4rem;
+}
+
+/* Spacing */
+
+.mt-12 {
+  margin-top: 1.2rem;
+}
+
+.mt-24 {
+  margin-top: 2.4rem;
+}
+
+.mt-32 {
+  margin-top: 3.2rem;
+}
+
+.mt-48 {
+  margin-top: 4.8rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ************* */
+.end-black-box {
+  height: 6.4rem;
+  width: 100%;
+  background-color: var(--main-dark);
+  border-radius: 6.4rem 6.4rem 0 0;
+  pointer-events: none;
+}
+
+.line {
+  background-color: var(--body-text-dark);
+  height: 32px;
+  width: 3px;
+}
+
+/* COMMON SECTIONS */
+
+.section-footer {
+  padding: 12.8rem 0 6.4rem 0;
+}
+
+.footer-wrapper {
+  display: flex;
+  gap: 4.8rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3.2rem 0 4.8rem 0;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+
+.footer-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--main-lite);
+}
+
+.footer-item p {
+  font-size: 1.8rem;
+  max-width: 398px;
+}
+
+.designed-by {
+  font-size: 1.6rem;
+}
+
+.name:link,
+.name:visited {
+  color: var(--main-brand-color);
+}
